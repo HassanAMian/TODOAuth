@@ -9,6 +9,8 @@ gem 'jquery-rails'
 gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'sdoc', '~> 0.4.0', group: :doc
+gem 'test-unit'
+gem 'minitest'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

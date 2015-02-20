@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe "Creating todo lists" do
+	
 	def create_todo_list(options={})
 		options[:title] ||= "Foo"
 		options [:description] ||= "Bar"

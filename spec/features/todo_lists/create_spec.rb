@@ -17,15 +17,12 @@ describe "Creating todo lists" do
 
 	it "redirects to index page on success" do 
 		create_todo_list
-
 		expect(page).to have_content("Todo list was successfully created")
 	end
 
 	it "displays an error when todo list title is missing" do 
 		expect(TodoList.count).to eq(0)
-
 		create_todo_list title: ""
-		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
 
@@ -35,9 +32,7 @@ describe "Creating todo lists" do
 
 	it "displays an error when todo list title is less than 3 characters" do 
 		expect(TodoList.count).to eq(0)
-
 		create_todo_list title: "Yo"
-		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
 
@@ -47,9 +42,7 @@ describe "Creating todo lists" do
 
 	it "displays an error when todo list description is missing" do 
 		expect(TodoList.count).to eq(0)
-
 		create_todo_list description: ""
-		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
 
@@ -59,9 +52,7 @@ describe "Creating todo lists" do
 
 	it "displays an error when todo list description is less than 3 characters" do 
 		expect(TodoList.count).to eq(0)
-
 		create_todo_list description: "Yo"
-		
 		expect(page).to have_content("error")
 		expect(TodoList.count).to eq(0)
 

@@ -27,4 +27,27 @@ describe "Editing todo lists" do
 		expect(todo_list.title).to eq("New")
 		expect(todo_list.description).to eq("New")
 	end
+
+	it "displays an error with no title" do
+		update_todo_list todo_list: todo_list, title: "", description: "New"
+		title = todo_list.title
+		todo_list.reload
+		expect(todo_list.title).to eq(title)
+		expect(page).to have_content("error")
+	end
+
+	it "displays an error with short title" do
+		update_todo_list todo_list: todo_list, title: "Yo", description: "New"
+		expect(page).to have_content("error")
+	end
+
+	it "displays an error with no description" do
+		update_todo_list todo_list: todo_list, title: "New", description: ""
+		expect(page).to have_content("error")
+	end
+
+	it "displays an error with short description" do
+		update_todo_list todo_list: todo_list, title: "New", description: "Yo"
+		expect(page).to have_content("error")
+	end
 end

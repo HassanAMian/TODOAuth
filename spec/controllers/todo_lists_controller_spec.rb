@@ -23,14 +23,14 @@ describe TodoListsController do
   # This should return the minimal set of attributes required to create a valid
   # TodoList. As you add validations to TodoList, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "title" => "MyString", "description" => "MyDescription" } }
+  let(:valid_attributes) { { "title" => "MyString", "description" => "My Description" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # TodoListsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-describe "GET index" do
+  describe "GET index" do
     it "assigns all todo_lists as @todo_lists" do
       todo_list = TodoList.create! valid_attributes
       get :index, {}, valid_session

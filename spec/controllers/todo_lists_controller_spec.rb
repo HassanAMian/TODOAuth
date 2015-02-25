@@ -30,7 +30,7 @@ describe TodoListsController do
   # TodoListsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
 
-  describe "GET index" do
+describe "GET index" do
     it "assigns all todo_lists as @todo_lists" do
       todo_list = TodoList.create! valid_attributes
       get :index, {}, valid_session

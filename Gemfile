@@ -12,6 +12,8 @@ gem 'sdoc', '~> 0.4.1', group: :doc
 gem 'test-unit', '~> 3.0.9'
 gem 'minitest', '~> 5.5.1'
 gem 'rspec-activemodel-mocks'
+gem 'rspec-its'
+gem 'rspec-expectations'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
